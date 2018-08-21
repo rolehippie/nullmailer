@@ -1,0 +1,5 @@
+- name: restart nullmailer
+  systemd:
+    name: nullmailer
+    state: restarted
+    daemon_reload: yes

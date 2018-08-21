@@ -1,0 +1,67 @@
+- name: install packages
+  with_items:
+    - nullmailer
+    - bsd-mailx
+  package:
+    name: '{{ item }}'
+    state: present
+  tags:
+    - nullmailer
+
+- name: write adminaddr
+  notify:
+    - restart nullmailer
+  template:
+    src: adminaddr.j2
+    dest: /etc/nullmailer/adminaddr
+    mode: u=rw,g=r,o=r
+    owner: root
+    group: root
+  tags:
+    - nullmailer
+
+- name: write defaultdomain
+  notify:
+    - restart nullmailer
+  template:
+    src: defaultdomain.j2
+    dest: /etc/nullmailer/defaultdomain
+    mode: u=rw,g=r,o=r
+    owner: root
+    group: root
+  tags:
+    - nullmailer
+
+- name: write me
+  notify:
+    - restart nullmailer
+  template:
+    src: me.j2
+    dest: /etc/nullmailer/me
+    mode: u=rw,g=r,o=r
+    owner: root
+    group: root
+  tags:
+    - nullmailer
+
+- name: write remotes
+  notify:
+    - restart nullmailer
+  template:
+    src: remotes.j2
+    dest: /etc/nullmailer/remotes
+    mode: u=rw,g=,o=
+    owner: mail
+    group: mail
+  tags:
+    - nullmailer
+
+- name: start service
+  systemd:
+    name: nullmailer
+    state: started
+    daemon_reload: yes
+    masked: no
+    enabled: yes
+  tags:
+    - nullmailer
