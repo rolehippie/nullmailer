@@ -1,1 +1,1 @@
-{{ nullmailer_host }} smtp --port={{ nullmailer_port }} --user={{ nullmailer_username }} --pass={{ nullmailer_password }}
+{{ nullmailer_host }} smtp --port={{ nullmailer_port }} --user={{ nullmailer_username }} --pass={{ nullmailer_password }}{% if nullmailer_tls | default(True) %} --starttls{% endif %}

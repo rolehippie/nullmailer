@@ -4,3 +4,4 @@ nullmailer_host:
 nullmailer_port:
 nullmailer_username:
 nullmailer_password:
+nullmailer_tls: True
