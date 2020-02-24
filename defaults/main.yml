@@ -1,7 +1,30 @@
-nullmailer_adminaddr: '{{ ansible_fqdn }}'
-nullmailer_defaultdomain:
+# Standards: 0.1
+---
+# @var nullmailer_adminaddr:description: Admin address as default sender
+nullmailer_adminaddr: root
+
+# @var nullmailer_defaultdomain:description: Default domain used for nullmailer
+nullmailer_defaultdomain: '{{ ansible_fqdn }}'
+
+# @var nullmailer_host:description: Host for remote connection
 nullmailer_host:
+
+# @var nullmailer_port:description: Port for remote connection
 nullmailer_port:
+
+# @var nullmailer_username:description: Username for remote connection
 nullmailer_username:
+
+# @var nullmailer_password:description: Password for remote connection
 nullmailer_password:
-nullmailer_tls: True
+
+# @var nullmailer_starttls:description: Enable starttls for remote connection
+nullmailer_starttls: True
+
+# @var nullmailer_tls:description: Enable TLS for remote connection
+nullmailer_tls: False
+
+# @var nullmailer_ssl:description: Enable SSL for remote connection
+nullmailer_ssl: False
+
+...
