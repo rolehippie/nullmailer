@@ -13,7 +13,6 @@ Ansible role to configure nullmailer
   * [nullmailer_password](#nullmailer_password)
   * [nullmailer_port](#nullmailer_port)
   * [nullmailer_ssl](#nullmailer_ssl)
-  * [nullmailer_starttls](#nullmailer_starttls)
   * [nullmailer_tls](#nullmailer_tls)
   * [nullmailer_username](#nullmailer_username)
 * [Dependencies](#dependencies)
@@ -84,19 +83,9 @@ Enable SSL for remote connection
 nullmailer_ssl: false
 ```
 
-### nullmailer_starttls
-
-Enable starttls for remote connection
-
-#### Default value
-
-```YAML
-nullmailer_starttls: true
-```
-
 ### nullmailer_tls
 
-Enable TLS for remote connection
+Enable STARTTLS for remote connection
 
 #### Default value
 
