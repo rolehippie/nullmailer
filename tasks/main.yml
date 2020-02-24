@@ -1,5 +1,7 @@
-- name: install packages
-  with_items:
+# Standards: 0.1
+---
+- name: Install required packages
+  loop:
     - nullmailer
     - bsd-mailx
   package:
@@ -8,9 +10,9 @@
   tags:
     - nullmailer
 
-- name: write adminaddr
+- name: Write adminaddr config
   notify:
-    - restart nullmailer
+    - Restart nullmailer
   template:
     src: adminaddr.j2
     dest: /etc/nullmailer/adminaddr
@@ -20,9 +22,9 @@
   tags:
     - nullmailer
 
-- name: write defaultdomain
+- name: Write defaultdomain config
   notify:
-    - restart nullmailer
+    - Restart nullmailer
   template:
     src: defaultdomain.j2
     dest: /etc/nullmailer/defaultdomain
@@ -32,21 +34,9 @@
   tags:
     - nullmailer
 
-- name: write me
+- name: Write remotes config
   notify:
-    - restart nullmailer
-  template:
-    src: me.j2
-    dest: /etc/nullmailer/me
-    mode: u=rw,g=r,o=r
-    owner: root
-    group: root
-  tags:
-    - nullmailer
-
-- name: write remotes
-  notify:
-    - restart nullmailer
+    - Restart nullmailer
   template:
     src: remotes.j2
     dest: /etc/nullmailer/remotes
@@ -56,7 +46,30 @@
   tags:
     - nullmailer
 
-- name: start service
+- name: Write me config
+  notify:
+    - Restart nullmailer
+  when: ansible_os_family | lower != "debian"
+  template:
+    src: me.j2
+    dest: /etc/nullmailer/me
+    mode: u=rw,g=r,o=r
+    owner: root
+    group: root
+  tags:
+    - nullmailer
+
+- name: Remove me config
+  notify:
+    - Restart nullmailer
+  when: ansible_os_family | lower == "debian"
+  file:
+    path: /etc/nullmailer/me
+    state: absent
+  tags:
+    - nullmailer
+
+- name: Start nullmailer service
   systemd:
     name: nullmailer
     state: started
@@ -65,3 +78,5 @@
     enabled: yes
   tags:
     - nullmailer
+
+...
