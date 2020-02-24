@@ -18,10 +18,7 @@ nullmailer_username:
 # @var nullmailer_password:description: Password for remote connection
 nullmailer_password:
 
-# @var nullmailer_starttls:description: Enable starttls for remote connection
-nullmailer_starttls: True
-
-# @var nullmailer_tls:description: Enable TLS for remote connection
+# @var nullmailer_tls:description: Enable STARTTLS for remote connection
 nullmailer_tls: False
 
 # @var nullmailer_ssl:description: Enable SSL for remote connection
