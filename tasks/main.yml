@@ -5,7 +5,7 @@
     - nullmailer
     - bsd-mailx
   package:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: present
   tags:
     - nullmailer
@@ -73,9 +73,9 @@
   systemd:
     name: nullmailer
     state: started
-    daemon_reload: yes
-    masked: no
-    enabled: yes
+    daemon_reload: True
+    masked: False
+    enabled: True
   tags:
     - nullmailer
 
