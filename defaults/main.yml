@@ -22,6 +22,6 @@ nullmailer_password:
 nullmailer_tls: False
 
 # @var nullmailer_ssl:description: Enable SSL for remote connection
-nullmailer_ssl: False
+nullmailer_ssl: True
 
 ...
