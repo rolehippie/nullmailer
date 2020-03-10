@@ -80,7 +80,7 @@ Enable SSL for remote connection
 #### Default value
 
 ```YAML
-nullmailer_ssl: false
+nullmailer_ssl: true
 ```
 
 ### nullmailer_tls
@@ -105,7 +105,7 @@ nullmailer_username:
 
 ## Dependencies
 
-- None
+* None
 
 ## License
 
