@@ -1,4 +1,4 @@
-# Standards: 0.1
+# Standards: 1.2
 ---
 # @var nullmailer_adminaddr:description: Admin address as default sender
 nullmailer_adminaddr: root
