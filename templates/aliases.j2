@@ -1,0 +1,3 @@
+{% for item in nullmailer_default_aliases + nullmailer_extra_aliases %}
+{{ item.alias }}: {{ item.recipient }}
+{% endfor %}

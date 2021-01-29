@@ -14,7 +14,10 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 
 * [Default Variables](#default-variables)
   * [nullmailer_adminaddr](#nullmailer_adminaddr)
+  * [nullmailer_default_aliases](#nullmailer_default_aliases)
   * [nullmailer_defaultdomain](#nullmailer_defaultdomain)
+  * [nullmailer_enabled](#nullmailer_enabled)
+  * [nullmailer_extra_aliases](#nullmailer_extra_aliases)
   * [nullmailer_host](#nullmailer_host)
   * [nullmailer_password](#nullmailer_password)
   * [nullmailer_port](#nullmailer_port)
@@ -39,6 +42,40 @@ Admin address as default sender
 nullmailer_adminaddr: root
 ```
 
+### nullmailer_default_aliases
+
+List of default mail aliases
+
+#### Default value
+
+```YAML
+nullmailer_default_aliases:
+  - alias: mailer-daemon
+    recipient: postmaster
+  - alias: postmaster
+    recipient: root
+  - alias: nobody
+    recipient: root
+  - alias: hostmaster
+    recipient: root
+  - alias: usenet
+    recipient: root
+  - alias: news
+    recipient: root
+  - alias: webmaster
+    recipient: root
+  - alias: www
+    recipient: root
+  - alias: ftp
+    recipient: root
+  - alias: abuse
+    recipient: root
+  - alias: noc
+    recipient: root
+  - alias: security
+    recipient: root
+```
+
 ### nullmailer_defaultdomain
 
 Default domain used for nullmailer
@@ -47,6 +84,26 @@ Default domain used for nullmailer
 
 ```YAML
 nullmailer_defaultdomain: '{{ ansible_fqdn }}'
+```
+
+### nullmailer_enabled
+
+Enable nullmailer installation optionally
+
+#### Default value
+
+```YAML
+nullmailer_enabled: true
+```
+
+### nullmailer_extra_aliases
+
+List of extra mail aliases
+
+#### Default value
+
+```YAML
+nullmailer_extra_aliases: []
 ```
 
 ### nullmailer_host
@@ -86,7 +143,7 @@ Enable SSL for remote connection
 #### Default value
 
 ```YAML
-nullmailer_ssl: true
+nullmailer_ssl: false
 ```
 
 ### nullmailer_tls

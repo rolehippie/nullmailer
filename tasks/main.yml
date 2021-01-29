@@ -1,81 +1,100 @@
 # Standards: 1.2
 ---
-- name: Install required packages
-  loop:
-    - nullmailer
-    - bsd-mailx
+- name: Prepare nullmailer install
+  when: nullmailer_enabled
+  block:
+    - name: Install required packages
+      loop:
+        - nullmailer
+        - bsd-mailx
+      package:
+        name: "{{ item }}"
+        state: present
+      tags:
+        - nullmailer
+
+    - name: Write aliases config
+      template:
+        src: aliases.j2
+        dest: /etc/aliases
+      tags:
+        - nullmailer
+
+    - name: Write adminaddr config
+      notify:
+        - Restart nullmailer
+      template:
+        src: adminaddr.j2
+        dest: /etc/nullmailer/adminaddr
+        mode: u=rw,g=r,o=r
+        owner: root
+        group: root
+      tags:
+        - nullmailer
+
+    - name: Write defaultdomain config
+      notify:
+        - Restart nullmailer
+      template:
+        src: defaultdomain.j2
+        dest: /etc/nullmailer/defaultdomain
+        mode: u=rw,g=r,o=r
+        owner: root
+        group: root
+      tags:
+        - nullmailer
+
+    - name: Write remotes config
+      notify:
+        - Restart nullmailer
+      template:
+        src: remotes.j2
+        dest: /etc/nullmailer/remotes
+        mode: u=rw,g=,o=
+        owner: mail
+        group: mail
+      tags:
+        - nullmailer
+
+    - name: Write me config
+      notify:
+        - Restart nullmailer
+      when: ansible_os_family | lower != "debian"
+      template:
+        src: me.j2
+        dest: /etc/nullmailer/me
+        mode: u=rw,g=r,o=r
+        owner: root
+        group: root
+      tags:
+        - nullmailer
+
+    - name: Remove me config
+      notify:
+        - Restart nullmailer
+      when: ansible_os_family | lower == "debian"
+      file:
+        path: /etc/nullmailer/me
+        state: absent
+      tags:
+        - nullmailer
+
+    - name: Start nullmailer service
+      systemd:
+        name: nullmailer
+        state: started
+        daemon_reload: True
+        masked: False
+        enabled: True
+      tags:
+        - nullmailer
+
+- name: Purge nullmailer install
+  when: not nullmailer_enabled
   package:
-    name: "{{ item }}"
-    state: present
-  tags:
-    - nullmailer
-
-- name: Write adminaddr config
-  notify:
-    - Restart nullmailer
-  template:
-    src: adminaddr.j2
-    dest: /etc/nullmailer/adminaddr
-    mode: u=rw,g=r,o=r
-    owner: root
-    group: root
-  tags:
-    - nullmailer
-
-- name: Write defaultdomain config
-  notify:
-    - Restart nullmailer
-  template:
-    src: defaultdomain.j2
-    dest: /etc/nullmailer/defaultdomain
-    mode: u=rw,g=r,o=r
-    owner: root
-    group: root
-  tags:
-    - nullmailer
-
-- name: Write remotes config
-  notify:
-    - Restart nullmailer
-  template:
-    src: remotes.j2
-    dest: /etc/nullmailer/remotes
-    mode: u=rw,g=,o=
-    owner: mail
-    group: mail
-  tags:
-    - nullmailer
-
-- name: Write me config
-  notify:
-    - Restart nullmailer
-  when: ansible_os_family | lower != "debian"
-  template:
-    src: me.j2
-    dest: /etc/nullmailer/me
-    mode: u=rw,g=r,o=r
-    owner: root
-    group: root
-  tags:
-    - nullmailer
-
-- name: Remove me config
-  notify:
-    - Restart nullmailer
-  when: ansible_os_family | lower == "debian"
-  file:
-    path: /etc/nullmailer/me
-    state: absent
-  tags:
-    - nullmailer
-
-- name: Start nullmailer service
-  systemd:
     name: nullmailer
-    state: started
-    daemon_reload: True
-    masked: False
-    enabled: True
+    purge: True
+    state: absent
   tags:
     - nullmailer
 

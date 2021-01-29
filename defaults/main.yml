@@ -1,5 +1,8 @@
 # Standards: 1.2
 ---
+# @var nullmailer_enabled:description: Enable nullmailer installation optionally
+nullmailer_enabled: True
+
 # @var nullmailer_adminaddr:description: Admin address as default sender
 nullmailer_adminaddr: root
 
@@ -22,6 +25,36 @@ nullmailer_password:
 nullmailer_tls: False
 
 # @var nullmailer_ssl:description: Enable SSL for remote connection
-nullmailer_ssl: True
+nullmailer_ssl: False
+
+# @var nullmailer_default_aliases:description: List of default mail aliases
+nullmailer_default_aliases:
+  - alias: mailer-daemon
+    recipient: postmaster
+  - alias: postmaster
+    recipient: root
+  - alias: nobody
+    recipient: root
+  - alias: hostmaster
+    recipient: root
+  - alias: usenet
+    recipient: root
+  - alias: news
+    recipient: root
+  - alias: webmaster
+    recipient: root
+  - alias: www
+    recipient: root
+  - alias: ftp
+    recipient: root
+  - alias: abuse
+    recipient: root
+  - alias: noc
+    recipient: root
+  - alias: security
+    recipient: root
+
+# @var nullmailer_extra_aliases:description: List of extra mail aliases
+nullmailer_extra_aliases: []
 
 ...
