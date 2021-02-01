@@ -28,6 +28,16 @@ nullmailer_tls: False
 nullmailer_ssl: False
 
 # @var nullmailer_default_aliases:description: List of default mail aliases
+# @var nullmailer_default_aliases:example: >
+# nullmailer_default_aliases:
+#   - alias: root
+#     recipient: user1@example.com
+#   - alias: postmaster
+#     recipients:
+#       - user1@example.com
+#       - user2@example.com
+#       - user3@example.com
+# @end
 nullmailer_default_aliases:
   - alias: mailer-daemon
     recipient: postmaster
@@ -55,6 +65,16 @@ nullmailer_default_aliases:
     recipient: root
 
 # @var nullmailer_extra_aliases:description: List of extra mail aliases
+# @var nullmailer_extra_aliases:example: >
+# nullmailer_extra_aliases:
+#   - alias: root
+#     recipient: user1@example.com
+#   - alias: postmaster
+#     recipients:
+#       - user1@example.com
+#       - user2@example.com
+#       - user3@example.com
+# @end
 nullmailer_extra_aliases: []
 
 ...

@@ -76,6 +76,19 @@ nullmailer_default_aliases:
     recipient: root
 ```
 
+#### Example usage
+
+```YAML
+nullmailer_default_aliases:
+  - alias: root
+    recipient: user1@example.com
+  - alias: postmaster
+    recipients:
+      - user1@example.com
+      - user2@example.com
+      - user3@example.com
+```
+
 ### nullmailer_defaultdomain
 
 Default domain used for nullmailer
@@ -104,6 +117,19 @@ List of extra mail aliases
 
 ```YAML
 nullmailer_extra_aliases: []
+```
+
+#### Example usage
+
+```YAML
+nullmailer_extra_aliases:
+  - alias: root
+    recipient: user1@example.com
+  - alias: postmaster
+    recipients:
+      - user1@example.com
+      - user2@example.com
+      - user3@example.com
 ```
 
 ### nullmailer_host
