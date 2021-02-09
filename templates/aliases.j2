@@ -1,3 +1,5 @@
 {% for item in nullmailer_default_aliases + nullmailer_extra_aliases %}
-{{ item.alias }}: {% if item.recipients | default(False) %}{{ item.recipients | join(', ') }}{% else %}{{ item.recipient }}{% endif %}
+{{ item.alias }}: {% if item.recipients | default(False) %}{{ item.recipients | join(', ') }}
+{% else %}{{ item.recipient }}
+{% endif %}
 {% endfor %}
