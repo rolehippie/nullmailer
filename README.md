@@ -14,6 +14,7 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 
 * [Default Variables](#default-variables)
   * [nullmailer_adminaddr](#nullmailer_adminaddr)
+  * [nullmailer_allmailfrom](#nullmailer_allmailfrom)
   * [nullmailer_default_aliases](#nullmailer_default_aliases)
   * [nullmailer_defaultdomain](#nullmailer_defaultdomain)
   * [nullmailer_enabled](#nullmailer_enabled)
@@ -40,6 +41,16 @@ Admin address as default sender
 
 ```YAML
 nullmailer_adminaddr: root
+```
+
+### nullmailer_allmailfrom
+
+Define an address that's always used as sender
+
+#### Default value
+
+```YAML
+nullmailer_allmailfrom:
 ```
 
 ### nullmailer_default_aliases

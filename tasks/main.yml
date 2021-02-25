@@ -44,6 +44,18 @@
       tags:
         - nullmailer
 
+    - name: Write allmailfrom config
+      notify:
+        - Restart nullmailer
+      template:
+        src: allmailfrom.j2
+        dest: /etc/nullmailer/allmailfrom
+        mode: u=rw,g=r,o=r
+        owner: root
+        group: root
+      tags:
+        - nullmailer
+
     - name: Write remotes config
       notify:
         - Restart nullmailer

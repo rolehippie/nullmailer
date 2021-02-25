@@ -9,6 +9,9 @@ nullmailer_adminaddr: root
 # @var nullmailer_defaultdomain:description: Default domain used for nullmailer
 nullmailer_defaultdomain: '{{ ansible_fqdn }}'
 
+# @var nullmailer_allmailfrom:description: Define an address that's always used as sender
+nullmailer_allmailfrom:
+
 # @var nullmailer_host:description: Host for remote connection
 nullmailer_host:
 
