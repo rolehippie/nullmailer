@@ -22,6 +22,7 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
   * [nullmailer_host](#nullmailer_host)
   * [nullmailer_password](#nullmailer_password)
   * [nullmailer_port](#nullmailer_port)
+  * [nullmailer_ppa](#nullmailer_ppa)
   * [nullmailer_ssl](#nullmailer_ssl)
   * [nullmailer_tls](#nullmailer_tls)
   * [nullmailer_username](#nullmailer_username)
@@ -171,6 +172,17 @@ Port for remote connection
 
 ```YAML
 nullmailer_port:
+```
+
+### nullmailer_ppa
+
+Install nullmailer optionally from this ppa
+
+#### Default value
+
+```YAML
+nullmailer_ppa: "{{ 'ppa:thomasboerger/backports' if ansible_distribution_version\
+  \ is version('16.04', '<=') else False }}"
 ```
 
 ### nullmailer_ssl

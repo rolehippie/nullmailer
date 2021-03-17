@@ -3,6 +3,14 @@
 - name: Prepare nullmailer install
   when: nullmailer_enabled
   block:
+    - name: Add ppa repository
+      when: nullmailer_ppa | default(False)
+      apt_repository:
+        repo: "{{ nullmailer_ppa }}"
+        state: present
+      tags:
+        - nullmailer
+
     - name: Install required packages
       loop:
         - nullmailer
