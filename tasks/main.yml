@@ -3,14 +3,6 @@
 - name: Prepare nullmailer install
   when: nullmailer_enabled
   block:
-    - name: Add ppa repository
-      when: nullmailer_ppa | default(False)
-      apt_repository:
-        repo: "{{ nullmailer_ppa }}"
-        state: present
-      tags:
-        - nullmailer
-
     - name: Install required packages
       loop:
         - nullmailer
@@ -25,6 +17,40 @@
       template:
         src: aliases.j2
         dest: /etc/aliases
+      tags:
+        - nullmailer
+
+    - name: Check sendmail copy
+      when: nullmailer_sendmail_overwrite
+      register: nullmailer_sendmail_check
+      stat:
+        path: /usr/sbin/sendmail-bin
+      tags:
+        - nullmailer
+
+    - name: Copy sendmail command
+      when: not nullmailer_sendmail_check.stat.exists | default(True)
+      copy:
+        src: /usr/sbin/sendmail
+        dest: /usr/sbin/sendmail-bin
+        owner: root
+        group: root
+        mode: u=rwx,g=rw,o=rx
+        remote_src: True
+      tags:
+        - nullmailer
+
+    - name: Overwrite sendmail command
+      notify:
+        - Restart nullmailer
+      when: nullmailer_sendmail_overwrite
+      diff: False
+      template:
+        src: sendmail.j2
+        dest: /usr/sbin/sendmail
+        owner: root
+        group: root
+        mode: u=rwx,g=rw,o=rx
       tags:
         - nullmailer
 

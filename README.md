@@ -22,7 +22,7 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
   * [nullmailer_host](#nullmailer_host)
   * [nullmailer_password](#nullmailer_password)
   * [nullmailer_port](#nullmailer_port)
-  * [nullmailer_ppa](#nullmailer_ppa)
+  * [nullmailer_sendmail_overwrite](#nullmailer_sendmail_overwrite)
   * [nullmailer_ssl](#nullmailer_ssl)
   * [nullmailer_tls](#nullmailer_tls)
   * [nullmailer_username](#nullmailer_username)
@@ -174,15 +174,15 @@ Port for remote connection
 nullmailer_port:
 ```
 
-### nullmailer_ppa
+### nullmailer_sendmail_overwrite
 
-Install nullmailer optionally from this ppa
+Enforce a sendmail wrapper for old versions
 
 #### Default value
 
 ```YAML
-nullmailer_ppa: "{{ 'ppa:thomasboerger/backports' if ansible_distribution_version\
-  \ is version('16.04', '<=') else False }}"
+nullmailer_sendmail_overwrite: "{{ nullmailer_allmailfrom | default(False) and ansible_distribution_version\
+  \ is version('16.04', '<=') }}"
 ```
 
 ### nullmailer_ssl
