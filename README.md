@@ -1,6 +1,6 @@
 # nullmailer
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/nullmailer) [![Build Status](https://img.shields.io/drone/build/rolehippie/nullmailer/master?logo=drone)](https://cloud.drone.io/rolehippie/nullmailer) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/nullmailer)](https://github.com/rolehippie/nullmailer/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/nullmailer) [![Testing Build](https://github.com/rolehippie/nullmailer/workflows/testing/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/nullmailer/workflows/readme/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/nullmailer/workflows/galaxy/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/nullmailer)](https://github.com/rolehippie/nullmailer/blob/master/LICENSE) 
 
 Ansible role to install and configure nullmailer relay MTA. 
 
