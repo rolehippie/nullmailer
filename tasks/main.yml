@@ -17,6 +17,9 @@
       template:
         src: aliases.j2
         dest: /etc/aliases
+        owner: root
+        group: root
+        mode: u=rw,g=r,o=r
       tags:
         - nullmailer
 
