@@ -1,34 +1,35 @@
 # nullmailer
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/nullmailer) [![Testing Build](https://github.com/rolehippie/nullmailer/workflows/testing/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/nullmailer/workflows/readme/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/nullmailer/workflows/galaxy/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/nullmailer)](https://github.com/rolehippie/nullmailer/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/nullmailer) [![Testing Build](https://github.com/rolehippie/nullmailer/workflows/testing/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Atesting) [![Readme Build](https://github.com/rolehippie/nullmailer/workflows/readme/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Areadme) [![Galaxy Build](https://github.com/rolehippie/nullmailer/workflows/galaxy/badge.svg)](https://github.com/rolehippie/nullmailer/actions?query=workflow%3Agalaxy) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/nullmailer)](https://github.com/rolehippie/nullmailer/blob/master/LICENSE)
 
-Ansible role to install and configure nullmailer relay MTA. 
+Ansible role to install and configure nullmailer relay MTA.
 
-## Sponsor 
+## Sponsor
 
-[![Proact Deutschland GmbH](https://proact.eu/wp-content/uploads/2020/03/proact-logo.png)](https://proact.eu) 
+[![Proact Deutschland GmbH](https://proact.eu/wp-content/uploads/2020/03/proact-logo.png)](https://proact.eu)
 
 Building and improving this Ansible role have been sponsored by my employer **Proact Deutschland GmbH**.
 
 ## Table of content
 
-* [Default Variables](#default-variables)
-  * [nullmailer_adminaddr](#nullmailer_adminaddr)
-  * [nullmailer_allmailfrom](#nullmailer_allmailfrom)
-  * [nullmailer_default_aliases](#nullmailer_default_aliases)
-  * [nullmailer_defaultdomain](#nullmailer_defaultdomain)
-  * [nullmailer_enabled](#nullmailer_enabled)
-  * [nullmailer_extra_aliases](#nullmailer_extra_aliases)
-  * [nullmailer_host](#nullmailer_host)
-  * [nullmailer_password](#nullmailer_password)
-  * [nullmailer_port](#nullmailer_port)
-  * [nullmailer_sendmail_overwrite](#nullmailer_sendmail_overwrite)
-  * [nullmailer_ssl](#nullmailer_ssl)
-  * [nullmailer_tls](#nullmailer_tls)
-  * [nullmailer_username](#nullmailer_username)
-* [Dependencies](#dependencies)
-* [License](#license)
-* [Author](#author)
+- [Default Variables](#default-variables)
+  - [nullmailer_adminaddr](#nullmailer_adminaddr)
+  - [nullmailer_allmailfrom](#nullmailer_allmailfrom)
+  - [nullmailer_default_aliases](#nullmailer_default_aliases)
+  - [nullmailer_defaultdomain](#nullmailer_defaultdomain)
+  - [nullmailer_enabled](#nullmailer_enabled)
+  - [nullmailer_extra_aliases](#nullmailer_extra_aliases)
+  - [nullmailer_host](#nullmailer_host)
+  - [nullmailer_password](#nullmailer_password)
+  - [nullmailer_port](#nullmailer_port)
+  - [nullmailer_sendmail_overwrite](#nullmailer_sendmail_overwrite)
+  - [nullmailer_ssl](#nullmailer_ssl)
+  - [nullmailer_tls](#nullmailer_tls)
+  - [nullmailer_username](#nullmailer_username)
+- [Discovered Tags](#discovered-tags)
+- [Dependencies](#dependencies)
+- [License](#license)
+- [Author](#author)
 
 ---
 
@@ -215,9 +216,14 @@ Username for remote connection
 nullmailer_username:
 ```
 
+## Discovered Tags
+
+**_nullmailer_**
+
+
 ## Dependencies
 
-* None
+- None
 
 ## License
 
