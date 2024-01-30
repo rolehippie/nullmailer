@@ -24,6 +24,9 @@ nullmailer_username:
 # @var nullmailer_password:description: Password for remote connection
 nullmailer_password:
 
+# @var nullmailer_auth_login:description: Force SMTP "AUTH LOGIN" mode instead of auto-detecting.
+nullmailer_auth_login: False
+
 # @var nullmailer_tls:description: Enable STARTTLS for remote connection
 nullmailer_tls: False
 
