@@ -74,10 +74,6 @@ Force SMTP "AUTH LOGIN" mode instead of auto-detecting.
 nullmailer_auth_login: false
 ```
 
-
-
-
-
 ### nullmailer_default_aliases
 
 List of default mail aliases
