@@ -19,6 +19,7 @@ Building and improving this Ansible role have been sponsored by my current and p
 - [Default Variables](#default-variables)
   - [nullmailer_adminaddr](#nullmailer_adminaddr)
   - [nullmailer_allmailfrom](#nullmailer_allmailfrom)
+  - [nullmailer_auth_login](#nullmailer_auth_login)
   - [nullmailer_default_aliases](#nullmailer_default_aliases)
   - [nullmailer_defaultdomain](#nullmailer_defaultdomain)
   - [nullmailer_enabled](#nullmailer_enabled)
@@ -62,6 +63,20 @@ Define an address that's always used as sender
 ```YAML
 nullmailer_allmailfrom:
 ```
+
+### nullmailer_auth_login
+
+Force SMTP "AUTH LOGIN" mode instead of auto-detecting.
+
+#### Default value
+
+```YAML
+nullmailer_auth_login: false
+```
+
+
+
+
 
 ### nullmailer_default_aliases
 
