@@ -1,7 +1,6 @@
-# Standards: 1.2
 ---
 - name: Restart nullmailer
-  systemd:
+  ansible.builtin.systemd:
     name: nullmailer
     state: restarted
     daemon_reload: True
