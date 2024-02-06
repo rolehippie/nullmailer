@@ -6,14 +6,14 @@
       loop:
         - nullmailer
         - bsd-mailx
-      package:
+      ansible.builtin.package:
         name: "{{ item }}"
         state: present
       tags:
         - nullmailer
 
     - name: Write aliases config
-      template:
+      ansible.builtin.template:
         src: aliases.j2
         dest: /etc/aliases
         owner: root
@@ -25,14 +25,14 @@
     - name: Check sendmail copy
       when: nullmailer_sendmail_overwrite
       register: nullmailer_sendmail_check
-      stat:
+      ansible.builtin.stat:
         path: /usr/sbin/sendmail-bin
       tags:
         - nullmailer
 
     - name: Copy sendmail command
       when: not nullmailer_sendmail_check.stat.exists | default(True)
-      copy:
+      ansible.builtin.copy:
         src: /usr/sbin/sendmail
         dest: /usr/sbin/sendmail-bin
         owner: root
@@ -47,7 +47,7 @@
         - Restart nullmailer
       when: nullmailer_sendmail_overwrite
       diff: False
-      template:
+      ansible.builtin.template:
         src: sendmail.j2
         dest: /usr/sbin/sendmail
         owner: root
@@ -59,7 +59,7 @@
     - name: Write adminaddr config
       notify:
         - Restart nullmailer
-      template:
+      ansible.builtin.template:
         src: adminaddr.j2
         dest: /etc/nullmailer/adminaddr
         mode: u=rw,g=r,o=r
@@ -71,7 +71,7 @@
     - name: Write defaultdomain config
       notify:
         - Restart nullmailer
-      template:
+      ansible.builtin.template:
         src: defaultdomain.j2
         dest: /etc/nullmailer/defaultdomain
         mode: u=rw,g=r,o=r
@@ -83,7 +83,7 @@
     - name: Write allmailfrom config
       notify:
         - Restart nullmailer
-      template:
+      ansible.builtin.template:
         src: allmailfrom.j2
         dest: /etc/nullmailer/allmailfrom
         mode: u=rw,g=r,o=r
@@ -95,7 +95,7 @@
     - name: Write remotes config
       notify:
         - Restart nullmailer
-      template:
+      ansible.builtin.template:
         src: remotes.j2
         dest: /etc/nullmailer/remotes
         mode: u=rw,g=,o=
@@ -108,7 +108,7 @@
       notify:
         - Restart nullmailer
       when: ansible_os_family | lower != "debian"
-      template:
+      ansible.builtin.template:
         src: me.j2
         dest: /etc/nullmailer/me
         mode: u=rw,g=r,o=r
@@ -121,14 +121,14 @@
       notify:
         - Restart nullmailer
       when: ansible_os_family | lower == "debian"
-      file:
+      ansible.builtin.file:
         path: /etc/nullmailer/me
         state: absent
       tags:
         - nullmailer
 
     - name: Start nullmailer service
-      systemd:
+      ansible.builtin.systemd:
         name: nullmailer
         state: started
         daemon_reload: True
@@ -139,7 +139,7 @@
 
 - name: Purge nullmailer install
   when: not nullmailer_enabled
-  package:
+  ansible.builtin.package:
     name: nullmailer
     purge: True
     state: absent
