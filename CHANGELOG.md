@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/rolehippie/nullmailer/compare/v1.1.0...v2.0.0) (2024-02-12)
+
+
+### Features
+
+* drop support for ubuntu 18.04 ([66145ab](https://github.com/rolehippie/nullmailer/commit/66145ab03a8d0082e4a16f23d31ef513ed74b311))
+* used full qualified collection names ([d76e245](https://github.com/rolehippie/nullmailer/commit/d76e2451ec7c87a952d333483376cd29f622ef9c))
+
 ## [1.1.0](https://github.com/rolehippie/nullmailer/compare/v1.0.0...v1.1.0) (2024-01-31)
 
 
