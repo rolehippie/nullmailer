@@ -22,30 +22,21 @@
       tags:
         - nullmailer
 
-    - name: Check sendmail copy
-      when: nullmailer_sendmail_overwrite
-      register: nullmailer_sendmail_check
-      ansible.builtin.stat:
-        path: /usr/sbin/sendmail-bin
-      tags:
-        - nullmailer
-
-    - name: Copy sendmail command
-      when: not nullmailer_sendmail_check.stat.exists | default(True)
-      ansible.builtin.copy:
-        src: /usr/sbin/sendmail
-        dest: /usr/sbin/sendmail-bin
-        owner: root
-        group: root
-        mode: u=rwx,g=rw,o=rx
-        remote_src: True
+    - name: Divert sendmail binary
+      when:
+        - nullmailer_sendmail_overwrite
+      community.general.dpkg_divert:
+        path: /usr/sbin/sendmail
+        divert: /usr/sbin/sendmail-bin
+        rename: True
       tags:
         - nullmailer
 
     - name: Overwrite sendmail command
       notify:
         - Restart nullmailer
-      when: nullmailer_sendmail_overwrite
+      when:
+        - nullmailer_sendmail_overwrite
       diff: False
       ansible.builtin.template:
         src: sendmail.j2
@@ -107,7 +98,8 @@
     - name: Write me config
       notify:
         - Restart nullmailer
-      when: ansible_os_family | lower != "debian"
+      when:
+        - ansible_os_family | lower != "debian"
       ansible.builtin.template:
         src: me.j2
         dest: /etc/nullmailer/me
@@ -120,7 +112,8 @@
     - name: Remove me config
       notify:
         - Restart nullmailer
-      when: ansible_os_family | lower == "debian"
+      when:
+        - ansible_os_family | lower == "debian"
       ansible.builtin.file:
         path: /etc/nullmailer/me
         state: absent
@@ -138,11 +131,23 @@
         - nullmailer
 
 - name: Purge nullmailer install
-  when: not nullmailer_enabled
+  when:
+    - not nullmailer_enabled
   ansible.builtin.package:
     name: nullmailer
     purge: True
     state: absent
+  tags:
+    - nullmailer
+
+- name: Revert sendmail divert
+  when:
+    - not nullmailer_enabled
+  community.general.dpkg_divert:
+    path: /usr/sbin/sendmail
+    state: absent
+    rename: True
+    force: True
   tags:
     - nullmailer
 
