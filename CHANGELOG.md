@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/rolehippie/nullmailer/compare/v2.0.0...v2.1.0) (2024-09-02)
+
+
+### Features
+
+* divert instead of copy sendmail binary ([3315194](https://github.com/rolehippie/nullmailer/commit/3315194a865fd8604b3ce1d43ccbfce6ff46bbb2))
+
 ## [2.0.0](https://github.com/rolehippie/nullmailer/compare/v1.1.0...v2.0.0) (2024-02-12)
 
 
