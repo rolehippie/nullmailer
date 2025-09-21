@@ -1,6 +1,6 @@
 ---
 # @var nullmailer_enabled:description: Enable nullmailer installation optionally
-nullmailer_enabled: True
+nullmailer_enabled: true
 
 # @var nullmailer_adminaddr:description: Admin address as default sender
 nullmailer_adminaddr: root
@@ -24,16 +24,16 @@ nullmailer_username:
 nullmailer_password:
 
 # @var nullmailer_auth_login:description: Force SMTP "AUTH LOGIN" mode instead of auto-detecting.
-nullmailer_auth_login: False
+nullmailer_auth_login: false
 
 # @var nullmailer_tls:description: Enable STARTTLS for remote connection
-nullmailer_tls: False
+nullmailer_tls: false
 
 # @var nullmailer_ssl:description: Enable SSL for remote connection
-nullmailer_ssl: False
+nullmailer_ssl: false
 
 # @var nullmailer_sendmail_overwrite:description: Enforce a sendmail wrapper for old versions
-nullmailer_sendmail_overwrite: "{{ nullmailer_allmailfrom | default(False) and ansible_distribution_version is version('16.04', '<=') }}"
+nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true) and ansible_distribution_version is version('16.04', '<=') }}"
 
 # @var nullmailer_default_aliases:description: List of default mail aliases
 # @var nullmailer_default_aliases:example: >

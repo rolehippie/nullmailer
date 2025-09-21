@@ -1,6 +1,9 @@
 ---
 - name: Prepare nullmailer install
-  when: nullmailer_enabled
+  when:
+    - nullmailer_enabled
+  tags:
+    - nullmailer
   block:
     - name: Install required packages
       loop:
@@ -28,7 +31,7 @@
       community.general.dpkg_divert:
         path: /usr/sbin/sendmail
         divert: /usr/sbin/sendmail-bin
-        rename: True
+        rename: true
       tags:
         - nullmailer
 
@@ -37,7 +40,7 @@
         - Restart nullmailer
       when:
         - nullmailer_sendmail_overwrite
-      diff: False
+      diff: false
       ansible.builtin.template:
         src: sendmail.j2
         dest: /usr/sbin/sendmail
@@ -124,9 +127,9 @@
       ansible.builtin.systemd:
         name: nullmailer
         state: started
-        daemon_reload: True
-        masked: False
-        enabled: True
+        daemon_reload: true
+        masked: false
+        enabled: true
       tags:
         - nullmailer
 
@@ -135,7 +138,7 @@
     - not nullmailer_enabled
   ansible.builtin.package:
     name: nullmailer
-    purge: True
+    purge: true
     state: absent
   tags:
     - nullmailer
@@ -146,8 +149,8 @@
   community.general.dpkg_divert:
     path: /usr/sbin/sendmail
     state: absent
-    rename: True
-    force: True
+    rename: true
+    force: true
   tags:
     - nullmailer
 

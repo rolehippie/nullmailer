@@ -1,4 +1,4 @@
-# workspace
+# nullmailer
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/nullmailer)
 [![General Workflow](https://github.com/rolehippie/nullmailer/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/nullmailer/actions/workflows/general.yml)
@@ -201,7 +201,7 @@ Enforce a sendmail wrapper for old versions
 #### Default value
 
 ```YAML
-nullmailer_sendmail_overwrite: "{{ nullmailer_allmailfrom | default(False) and ansible_distribution_version
+nullmailer_sendmail_overwrite: "{{ nullmailer_allmailfrom | default(false) and ansible_distribution_version
   is version('16.04', '<=') }}"
 ```
 
