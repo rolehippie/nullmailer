@@ -1,5 +1,8 @@
 ---
-collections: []
+collections:
+  - name: community.general
+    version: ">=11.3.0,<12.0.0"
+
 roles: []
 
 ...

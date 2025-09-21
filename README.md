@@ -241,7 +241,7 @@ nullmailer_username:
 
 ## Dependencies
 
-- None
+- [community.general](https://github.com/ansible-collections/community.general)
 
 ## License
 
