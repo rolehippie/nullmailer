@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/rolehippie/nullmailer/compare/v2.1.0...v2.2.0) (2025-09-21)
+
+
+### Features
+
+* apply new repo structure and update linting ([3ea8594](https://github.com/rolehippie/nullmailer/commit/3ea8594f48541aaa5933f52b01ccf254cfcfbf6c))
+
+
+### Bugfixes
+
+* add missing community.general dependency ([737f9ba](https://github.com/rolehippie/nullmailer/commit/737f9bad240b61f9fbfc5b0c06d7d66f62d5aaa1))
+
 ## [2.1.0](https://github.com/rolehippie/nullmailer/compare/v2.0.0...v2.1.0) (2024-09-02)
 
 
