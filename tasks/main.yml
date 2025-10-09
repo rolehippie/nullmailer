@@ -130,6 +130,7 @@
         daemon_reload: true
         masked: false
         enabled: true
+      ignore_errors: "{{ ansible_check_mode }}"
       tags:
         - nullmailer
 
