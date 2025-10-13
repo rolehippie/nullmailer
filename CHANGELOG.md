@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/rolehippie/nullmailer/compare/v2.2.0...v2.2.1) (2025-10-13)
+
+
+### Bugfixes
+
+* ignore errors in check mode ([802af02](https://github.com/rolehippie/nullmailer/commit/802af021bcb6df3ec2ad2859c121df12c541465a))
+
 ## [2.2.0](https://github.com/rolehippie/nullmailer/compare/v2.1.0...v2.2.0) (2025-09-21)
 
 
