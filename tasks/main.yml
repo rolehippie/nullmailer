@@ -124,13 +124,13 @@
         - nullmailer
 
     - name: Start nullmailer service
+      ignore_errors: "{{ ansible_check_mode }}"
       ansible.builtin.systemd:
         name: nullmailer
         state: started
         daemon_reload: true
         masked: false
         enabled: true
-      ignore_errors: "{{ ansible_check_mode }}"
       tags:
         - nullmailer
 

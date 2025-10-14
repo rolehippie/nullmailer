@@ -1,9 +1,9 @@
 ---
 - name: Restart nullmailer
+  ignore_errors: "{{ ansible_check_mode }}"
   ansible.builtin.systemd:
     name: nullmailer
     state: restarted
     daemon_reload: true
-  ignore_errors: "{{ ansible_check_mode }}"
 
 ...
