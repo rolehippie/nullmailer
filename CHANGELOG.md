@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/rolehippie/nullmailer/compare/v3.0.0...v3.1.0) (2025-11-17)
+
+
+### Features
+
+* only display sensitie information when verbosity is increased ([b4bffd2](https://github.com/rolehippie/nullmailer/commit/b4bffd2e5b2d802566d6393be39de07596359789))
+
 ## [3.0.0](https://github.com/rolehippie/nullmailer/compare/v2.2.1...v3.0.0) (2025-11-10)
 
 
