@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/rolehippie/nullmailer/compare/v3.1.0...v3.2.0) (2025-12-08)
+
+
+### Features
+
+* **minor:** update dependency community.general to >=12.1.0,<12.2.0 ([#48](https://github.com/rolehippie/nullmailer/issues/48)) ([a1db247](https://github.com/rolehippie/nullmailer/commit/a1db247847f1b9870ae0e986dab08f116a6978db))
+
 ## [3.1.0](https://github.com/rolehippie/nullmailer/compare/v3.0.0...v3.1.0) (2025-11-17)
 
 
