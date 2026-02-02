@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.4.0](https://github.com/rolehippie/nullmailer/compare/v3.3.0...v3.4.0) (2026-02-02)
+
+### Dependencies
+
+* **minor:** update dependency community.general to >=12.3.0,<12.4.0 ([#59](https://github.com/rolehippie/nullmailer/issues/59)) ([687a0cb](https://github.com/rolehippie/nullmailer/commit/687a0cb972973b6aa7440c9efed79c6ae209fac3))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([e94c3b2](https://github.com/rolehippie/nullmailer/commit/e94c3b21adb8bef99ba516f3588de0f32e0e083d))
+* **flake:** updated lockfile [skip ci] ([f202190](https://github.com/rolehippie/nullmailer/commit/f2021902fe922ccda325927f618fe5cf54dc26d1))
+* **flake:** updated lockfile [skip ci] ([d84ae0e](https://github.com/rolehippie/nullmailer/commit/d84ae0e1c019c3d340575a0f0eb182e720c4c1c1))
+* **flake:** updated lockfile [skip ci] ([29cafd8](https://github.com/rolehippie/nullmailer/commit/29cafd8f930b5a27d5a474ceeda497938471b377))
+
 ## [3.3.0](https://github.com/rolehippie/nullmailer/compare/v3.2.0...v3.3.0) (2026-01-05)
 
 
