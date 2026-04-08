@@ -201,8 +201,7 @@ Enforce a sendmail wrapper for old versions
 #### Default value
 
 ```YAML
-nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true)
-  and ansible_distribution_version is version('16.04', '<=') }}"
+nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true) and ansible_distribution_version is version('16.04', '<=') }}"
 ```
 
 ### nullmailer_ssl
