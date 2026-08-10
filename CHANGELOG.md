@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.0](https://github.com/rolehippie/nullmailer/compare/v4.3.0...v4.4.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#74](https://github.com/rolehippie/nullmailer/issues/74)) ([f4b2975](https://github.com/rolehippie/nullmailer/commit/f4b297555bf503d494caadd79a99e8335b6aca45))
+* **patch:** update dependency python to v3.14.7 ([#72](https://github.com/rolehippie/nullmailer/issues/72)) ([3c6bdc7](https://github.com/rolehippie/nullmailer/commit/3c6bdc72fb3f64fa00dec99500592a97026f8c97))
+
 ## [4.3.0](https://github.com/rolehippie/nullmailer/compare/v4.2.0...v4.3.0) (2026-07-27)
 
 ## [4.2.0](https://github.com/rolehippie/nullmailer/compare/v4.1.0...v4.2.0) (2026-07-20)
