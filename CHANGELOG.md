@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.5.0](https://github.com/rolehippie/nullmailer/compare/v4.4.0...v4.5.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency community.general to >=13.3.0,<13.4.0 ([#77](https://github.com/rolehippie/nullmailer/issues/77)) ([876dbae](https://github.com/rolehippie/nullmailer/commit/876dbae284532dcc24d496601e00997b1e34925c))
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#78](https://github.com/rolehippie/nullmailer/issues/78)) ([af80a90](https://github.com/rolehippie/nullmailer/commit/af80a905bffeb2457f97c3e149b1f3f392a9db9c))
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#79](https://github.com/rolehippie/nullmailer/issues/79)) ([d3ad34b](https://github.com/rolehippie/nullmailer/commit/d3ad34b20296c471e30fa489aec17655f03439f3))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#75](https://github.com/rolehippie/nullmailer/issues/75)) ([8f4a111](https://github.com/rolehippie/nullmailer/commit/8f4a1112dc8b1e8f3d62bd095045c01247520ec8))
+* **patch:** update dependency pre-commit to v4.6.2 ([#76](https://github.com/rolehippie/nullmailer/issues/76)) ([5309669](https://github.com/rolehippie/nullmailer/commit/5309669f83ff78a1d23311e821a8dd551ec8c191))
+
 ## [4.4.0](https://github.com/rolehippie/nullmailer/compare/v4.3.0...v4.4.0) (2026-08-10)
 
 ### Dependencies
