@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.0](https://github.com/rolehippie/nullmailer/compare/v4.5.1...v4.6.0) (2026-09-07)
+
+### Features
+
+* add separate requirements for molecule run ([98617e7](https://github.com/rolehippie/nullmailer/commit/98617e76e2aca847f659f8c4e3eebf0b050aee58))
+* use new required facts as attributes ([464e40a](https://github.com/rolehippie/nullmailer/commit/464e40a60e4bcf4c13c06f9c3ee789340c6bc724))
+
 ## [4.5.1](https://github.com/rolehippie/nullmailer/compare/v4.5.0...v4.5.1) (2026-08-31)
 
 ### Dependencies
