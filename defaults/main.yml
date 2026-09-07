@@ -6,7 +6,7 @@ nullmailer_enabled: true
 nullmailer_adminaddr: root
 
 # @var nullmailer_defaultdomain:description: Default domain used for nullmailer
-nullmailer_defaultdomain: '{{ ansible_fqdn }}'
+nullmailer_defaultdomain: '{{ ansible_facts['fqdn'] }}'
 
 # @var nullmailer_allmailfrom:description: Define an address that's always used as sender
 nullmailer_allmailfrom:
@@ -33,7 +33,7 @@ nullmailer_tls: false
 nullmailer_ssl: false
 
 # @var nullmailer_sendmail_overwrite:description: Enforce a sendmail wrapper for old versions
-nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true) and ansible_distribution_version is version('16.04', '<=') }}"
+nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true) and ansible_facts['distribution_version'] is version('16.04', '<=') }}"
 
 # @var nullmailer_default_aliases:description: List of default mail aliases
 # @var nullmailer_default_aliases:example: >

@@ -95,7 +95,7 @@
         mode: u=rw,g=,o=
         owner: mail
         group: mail
-      diff: "{{ ansible_verbosity >= 3 }}"
+      diff: "{{ ansible_facts['verbosity'] >= 3 }}"
       tags:
         - nullmailer
 
@@ -103,7 +103,7 @@
       notify:
         - Restart nullmailer
       when:
-        - ansible_os_family | lower != "debian"
+        - ansible_facts['os_family'] | lower != "debian"
       ansible.builtin.template:
         src: me.j2
         dest: /etc/nullmailer/me
@@ -117,7 +117,7 @@
       notify:
         - Restart nullmailer
       when:
-        - ansible_os_family | lower == "debian"
+        - ansible_facts['os_family'] | lower == "debian"
       ansible.builtin.file:
         path: /etc/nullmailer/me
         state: absent

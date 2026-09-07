@@ -128,7 +128,7 @@ Default domain used for nullmailer
 #### Default value
 
 ```YAML
-nullmailer_defaultdomain: '{{ ansible_fqdn }}'
+nullmailer_defaultdomain: '{{ ansible_facts['fqdn'] }}'
 ```
 
 ### nullmailer_enabled
@@ -201,7 +201,7 @@ Enforce a sendmail wrapper for old versions
 #### Default value
 
 ```YAML
-nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true) and ansible_distribution_version is version('16.04', '<=') }}"
+nullmailer_sendmail_overwrite: "{{ (false if nullmailer_allmailfrom is none else true) and ansible_facts['distribution_version'] is version('16.04', '<=') }}"
 ```
 
 ### nullmailer_ssl
