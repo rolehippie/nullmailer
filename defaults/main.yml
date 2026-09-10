@@ -6,7 +6,7 @@ nullmailer_enabled: true
 nullmailer_adminaddr: root
 
 # @var nullmailer_defaultdomain:description: Default domain used for nullmailer
-nullmailer_defaultdomain: '{{ ansible_facts['fqdn'] }}'
+nullmailer_defaultdomain: "{{ ansible_facts['fqdn'] }}"
 
 # @var nullmailer_allmailfrom:description: Define an address that's always used as sender
 nullmailer_allmailfrom:

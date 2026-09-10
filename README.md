@@ -128,7 +128,7 @@ Default domain used for nullmailer
 #### Default value
 
 ```YAML
-nullmailer_defaultdomain: '{{ ansible_facts['fqdn'] }}'
+nullmailer_defaultdomain: "{{ ansible_facts['fqdn'] }}"
 ```
 
 ### nullmailer_enabled
