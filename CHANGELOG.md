@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.7.0](https://github.com/rolehippie/nullmailer/compare/v4.6.0...v4.7.0) (2026-09-10)
+
+### Bugfixes
+
+* restore ansible_verbosity as a magic variable ([ac66ac1](https://github.com/rolehippie/nullmailer/commit/ac66ac136468958d4d7d734b77f3dbd09f1f30a2))
+* use double quotes for nullmailer_defaultdomain ([de84b54](https://github.com/rolehippie/nullmailer/commit/de84b54ad02e6a519a7b1b12801c3a3c8d3c7f61))
+
+### Dependencies
+
+* **minor:** update dependency community.general to >=13.4.0,<13.5.0 ([#81](https://github.com/rolehippie/nullmailer/issues/81)) ([79cdcfe](https://github.com/rolehippie/nullmailer/commit/79cdcfe11b797be30b58b8c9e6d0932419830ae8))
+* **mise:** update dependency pipx:ansible-core to v2.21.4 ([6a8b410](https://github.com/rolehippie/nullmailer/commit/6a8b4107575bf7fbfe7012fdf28e6069ba0f29c9))
+
 ## [4.6.0](https://github.com/rolehippie/nullmailer/compare/v4.5.1...v4.6.0) (2026-09-07)
 
 ### Features
