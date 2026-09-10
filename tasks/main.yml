@@ -95,7 +95,7 @@
         mode: u=rw,g=,o=
         owner: mail
         group: mail
-      diff: "{{ ansible_facts['verbosity'] >= 3 }}"
+      diff: "{{ ansible_verbosity >= 3 }}"
       tags:
         - nullmailer
 
