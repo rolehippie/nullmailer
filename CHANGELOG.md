@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.8.0](https://github.com/rolehippie/nullmailer/compare/v4.7.0...v4.8.0) (2026-10-12)
+
+### Dependencies
+
+* **minor:** update dependency community.general to >=13.5.0,<13.6.0 ([#93](https://github.com/rolehippie/nullmailer/issues/93)) ([563135a](https://github.com/rolehippie/nullmailer/commit/563135af7b24bb48e39747a3b12afad4e14a4eae))
+* **mise:** update dependency pipx:ansible-core to v2.21.5 ([#91](https://github.com/rolehippie/nullmailer/issues/91)) ([bb4a7dc](https://github.com/rolehippie/nullmailer/commit/bb4a7dca9b3e2cd942fa483091ac3e93cae58013))
+* **mise:** update dependency pipx:ansible-doctor to v8.4.2 ([#85](https://github.com/rolehippie/nullmailer/issues/85)) ([d8bc19d](https://github.com/rolehippie/nullmailer/commit/d8bc19dac46cf668dcb5fd529ba9c000a79bcf86))
+* **mise:** update dependency pipx:ansible-doctor to v8.4.3 ([#92](https://github.com/rolehippie/nullmailer/issues/92)) ([1d5a0c3](https://github.com/rolehippie/nullmailer/commit/1d5a0c308cb00bff74283fb5a9723e6be8503b43))
+* **mise:** update dependency pipx:ansible-lint to v26.10.0 ([#94](https://github.com/rolehippie/nullmailer/issues/94)) ([426c777](https://github.com/rolehippie/nullmailer/commit/426c777b5c8f0ee75a9e8a81f7999cfbad635d9f))
+* **mise:** update dependency pipx:ansible-lint to v26.9.0 ([#86](https://github.com/rolehippie/nullmailer/issues/86)) ([7c93cf6](https://github.com/rolehippie/nullmailer/commit/7c93cf6138cd532ffb921f73e78600c69794c437))
+* **mise:** update dependency pipx:molecule to v26.10.0 ([#95](https://github.com/rolehippie/nullmailer/issues/95)) ([e94c304](https://github.com/rolehippie/nullmailer/commit/e94c3045921ba5ff963c32264206435d450d5f29))
+* **mise:** update dependency pipx:molecule to v26.9.0 ([#87](https://github.com/rolehippie/nullmailer/issues/87)) ([eabdfc1](https://github.com/rolehippie/nullmailer/commit/eabdfc18b6f20ba07fbb570b3b5222db0e1af233))
+* **mise:** update dependency prek to v0.5.3 ([#84](https://github.com/rolehippie/nullmailer/issues/84)) ([5714e6e](https://github.com/rolehippie/nullmailer/commit/5714e6e75a322b5d78632b8dbe3ce6eeaf7403d9))
+* **mise:** update dependency prek to v0.5.4 ([#88](https://github.com/rolehippie/nullmailer/issues/88)) ([d088df9](https://github.com/rolehippie/nullmailer/commit/d088df9ac6741f19e39db2803333f23a53d5bbb6))
+* **mise:** update dependency prek to v0.5.5 ([#90](https://github.com/rolehippie/nullmailer/issues/90)) ([414cd89](https://github.com/rolehippie/nullmailer/commit/414cd897d2f0684b61193c1d2628ea702961be96))
+
 ## [4.7.0](https://github.com/rolehippie/nullmailer/compare/v4.6.0...v4.7.0) (2026-09-10)
 
 ### Bugfixes
