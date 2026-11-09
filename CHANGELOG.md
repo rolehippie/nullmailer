@@ -1,5 +1,21 @@
 # Changelog
 
+## [5.0.0](https://github.com/rolehippie/nullmailer/compare/v4.8.0...v5.0.0) (2026-11-09)
+
+### Dependencies
+
+* **major:** update dependency community.general to v14 ([#102](https://github.com/rolehippie/nullmailer/issues/102)) ([15180d3](https://github.com/rolehippie/nullmailer/commit/15180d3cd801e38095653eabf57c3c9805c19526))
+* **mise:** update dependency pipx:ansible-core to v2.22.0 ([#101](https://github.com/rolehippie/nullmailer/issues/101)) ([d9852f7](https://github.com/rolehippie/nullmailer/commit/d9852f7a4b86dbbe78e83411d1507e8ac51eed6a))
+* **mise:** update dependency pipx:ansible-doctor to v8.4.4 ([#106](https://github.com/rolehippie/nullmailer/issues/106)) ([b634c19](https://github.com/rolehippie/nullmailer/commit/b634c19f4c00be4284f3ffa21499a934b1dbcacc))
+* **mise:** update dependency pipx:ansible-lint to v26.10.1 ([#96](https://github.com/rolehippie/nullmailer/issues/96)) ([002d397](https://github.com/rolehippie/nullmailer/commit/002d397d55f95fc32f1af3226d143a1828baa9ea))
+* **mise:** update dependency pipx:ansible-lint to v26.11.0 ([#104](https://github.com/rolehippie/nullmailer/issues/104)) ([53f2603](https://github.com/rolehippie/nullmailer/commit/53f260383cbd80fbb1d93a863035d74634e74f31))
+* **mise:** update dependency pipx:molecule to v26.11.0 ([#105](https://github.com/rolehippie/nullmailer/issues/105)) ([f0105ea](https://github.com/rolehippie/nullmailer/commit/f0105ea8a8bb8daf50644804f179901a57f4aa63))
+* **mise:** update dependency prek to v0.5.10 ([#103](https://github.com/rolehippie/nullmailer/issues/103)) ([6ac9714](https://github.com/rolehippie/nullmailer/commit/6ac971481ad4747828cd7315ffb9763e406e86f2))
+* **mise:** update dependency prek to v0.5.6 ([#97](https://github.com/rolehippie/nullmailer/issues/97)) ([27c6dd2](https://github.com/rolehippie/nullmailer/commit/27c6dd2885bd656625dbce855c9e91e51664302d))
+* **mise:** update dependency prek to v0.5.7 ([#98](https://github.com/rolehippie/nullmailer/issues/98)) ([d82457f](https://github.com/rolehippie/nullmailer/commit/d82457f9984720be2cd00e7b4ea8b3132e5c5b5a))
+* **mise:** update dependency prek to v0.5.9 ([#100](https://github.com/rolehippie/nullmailer/issues/100)) ([e63b6d0](https://github.com/rolehippie/nullmailer/commit/e63b6d082d606645d19365b423132ebcf0e9dccb))
+* **mise:** update node.js to v26 ([#99](https://github.com/rolehippie/nullmailer/issues/99)) ([6e134eb](https://github.com/rolehippie/nullmailer/commit/6e134eb359c9f7f37005cea4ce980b1c53a89461))
+
 ## [4.8.0](https://github.com/rolehippie/nullmailer/compare/v4.7.0...v4.8.0) (2026-10-12)
 
 ### Dependencies
